@@ -28,7 +28,7 @@
         "ext-bcmath": "*",
         "ext-gmp": "*",
         "ext-intl": "*",
-        "florianv/exchanger": "~0.3 || ^1.0",
+        "florianv/exchanger": "^1.0",
         "florianv/swap": "^3.0",
         "psr/cache": "^1.0",
         "cache/taggable-cache": "^0.4.0",
@@ -36,9 +36,8 @@
         "leanphp/phpspec-code-coverage": "^3.0 || ^4.0",
         "doctrine/instantiator": "^1.0.5",
         "moneyphp/iso-currencies": "^3.0",
-        "sllh/php-cs-fixer-styleci-bridge": "^2.1",
         "php-http/message": "^1.4",
-        "php-http/mock-client": "^0.3.3"
+        "php-http/mock-client": "^1.0.0"
     },
     "suggest": {
         "ext-bcmath": "Calculate without integer limits",
@@ -72,7 +71,10 @@
             "vendor/bin/phpspec run -c phpspec.ci.yml",
             "vendor/bin/phpunit -v --coverage-text --coverage-clover=build/unit_coverage.xml"
         ],
-        "update-currencies": "cp vendor/moneyphp/iso-currencies/resources/current.php resources/currency.php"
+        "update-currencies": [
+            "cp vendor/moneyphp/iso-currencies/resources/current.php resources/currency.php",
+            "php resources/generate-money-factory.php"
+        ]
     },
     "extra": {
         "branch-alias": {
