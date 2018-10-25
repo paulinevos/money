@@ -118,3 +118,4 @@ in code and via his [blog](http://verraes.net/#blog), this library would not be 
 ## Extra comments
 Add an initial comment. (Oops forgot to add this line too.)
 
+Add a second comment not related to the first one.
