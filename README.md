@@ -114,3 +114,7 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 This library is heavily inspired by [Martin Fowler's Money pattern](http://martinfowler.com/eaaCatalog/money.html).
 A special remark goes to [Mathias Verraes](https://github.com/mathiasverraes), without his contributions,
 in code and via his [blog](http://verraes.net/#blog), this library would not be where it stands now.
+
+## Extra comments
+Add an initial comment. (Oops forgot to add this line too.)
+
