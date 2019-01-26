@@ -1,3 +1,37 @@
+# About this fork
+This fork was made purely for purposes of practicing Git during an 
+interactive workshop called _Git Legit_. 
+
+# Setup instructions
+_NOTE: if you already have PHP installed on your machine, make sure to 
+[get composer](http://getcomposer.org) and skip to Step 3._
+
+## Step 1: Install Docker
+[Install Docker](https://docs.docker.com/install/) for your OS. Find 
+your OS listed in the menu on the left. 
+
+## Step 2: Run the container
+
+Check out the container from Docker Hub. _Note: if you're not using 
+bash, replace `$PWD` with the full path to the repository._
+
+```
+$ docker run --rm -it -v "$PWD":/money -w /money synon/git-legit:latest
+```
+
+## Step 3: Get dependencies
+The previous step will enter you into a shell window. Once there, run:
+```
+$ composer install
+```
+This will take about a minute.
+
+## Step 4: Run the tests
+To ensure you're all set for the workshop, run the unit tests:
+```
+vendor/bin/phpunit 
+```
+
 # Money
 
 [![Latest Version](https://img.shields.io/github/release/moneyphp/money.svg?style=flat-square)](https://github.com/moneyphp/money/releases)
