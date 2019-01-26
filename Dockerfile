@@ -2,8 +2,10 @@ FROM php:7.2-cli
 
 RUN set -xe \
 	&& apt-get update \
-	&& apt-get install -qqy libicu-dev locales libgmp-dev \
-	&& docker-php-ext-install -j$(nproc) intl bcmath gmp
+	&& apt-get install -qqy libicu-dev locales libgmp-dev git unzip libzip-dev \
+    && docker-php-ext-install -j$(nproc) intl bcmath gmp zip \
+    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
+    && composer global require hirak/prestissimo
 
 RUN set -xe \
 	&& echo en_US ISO-8859-1 >> /etc/locale.gen \
@@ -16,3 +18,5 @@ RUN set -xe \
 	&& echo ru_RU.UTF-8 UTF-8 >> /etc/locale.gen \
 	&& locale-gen \
     && update-locale
+
+ENTRYPOINT /bin/bash
