@@ -76,20 +76,6 @@ final class MoneyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test
-     */
-    public function it_multiplies_the_amount_with_locale_that_uses_comma_separator()
-    {
-        $this->setLocale(LC_ALL, 'es_ES.utf8');
-
-        $money = new Money(100, new Currency(self::CURRENCY));
-        $money = $money->multiply(10 / 100);
-
-        $this->assertInstanceOf(Money::class, $money);
-        $this->assertEquals(10, $money->getAmount());
-    }
-
-    /**
      * @dataProvider invalidOperandExamples
      * @expectedException \InvalidArgumentException
      * @test
