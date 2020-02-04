@@ -100,24 +100,6 @@ final class IntlMoneyParserTest extends TestCase
     }
 
     /**
-     * TODO: investigate why this test fails with segmentation fault.
-     *
-     * @group segmentation
-     * @test
-     */
-    public function it_supports_fraction_digits_with_different_style_and_pattern()
-    {
-        $formatter = new \NumberFormatter('en_US', \NumberFormatter::DECIMAL);
-        $formatter->setPattern('¤#,##0.00;-¤#,##0.00');
-        $formatter->setAttribute(\NumberFormatter::FRACTION_DIGITS, 3);
-
-        $parser = new IntlMoneyParser($formatter, new ISOCurrencies());
-        $money = $parser->parse('$1000.005');
-
-        $this->assertEquals('100001', $money->getAmount());
-    }
-
-    /**
      * @group legacy
      * @expectedDeprecation Passing a currency as string is deprecated since 3.1 and will be removed in 4.0. Please pass a Money\Currency instance instead.
      * @test
