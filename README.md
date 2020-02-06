@@ -1,6 +1,6 @@
 # About this fork
 This fork was made purely for purposes of practicing Git during an 
-interactive workshop called _Git Legit_. 
+interactive workshop called _Git Legit_ :)
 
 # Setup instructions
 _NOTE: if you already have PHP installed on your machine, make sure to 
