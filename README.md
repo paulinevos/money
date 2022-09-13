@@ -1,5 +1,5 @@
 # About this fork
-This fork was made purely for purposes of practicing Git during an 
+This cool fork was made purely for purposes of practicing Git during an 
 interactive workshop called _Git Legit_. 
 
 # Setup instructions
